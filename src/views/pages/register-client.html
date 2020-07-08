@@ -1,0 +1,261 @@
+{% extends 'layouts/layout.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="/styles/register-client.css">
+<link rel="stylesheet" href="/styles/correios.css">
+<link rel="stylesheet" href="/styles/form.css">
+{% endblock head %}
+
+{% block content %}
+
+<form action="" method="post">
+    <!-- Primeiro campo -->
+    <div class="field-form">
+        <div class="field-container">
+            <div class="field-group">
+                <label for="">ID</label>
+                <input type="text" name="id">
+            </div>
+
+            <div class="field-group">
+                <label for="active">Ativo</label>
+                <select name="active">
+                    <option value="yes">Sim</option>
+                    <option value="no">Não</option>
+                </select>
+            </div>
+
+            <div class="field-group">
+                <label for="">Usar P.Venda</label>
+                <select name="active">
+                    <option value="1">Atacado 1</option>
+                    <option value="2">Atacado 2</option>
+                </select>
+            </div>
+
+            <div class="field-group">
+                <label for="fantasy-name">Nome Completo/Razão Social</label>
+                <input type="text" name="company-name">
+            </div>
+
+            <div class="field-group">
+                <label for="fantasy-name">Nome Fantasia</label>
+                <input type="text" name="fantasy-name">
+            </div>
+        </div>
+    </div>
+    <!-- Segundo campo -->
+    <div class="field-form">
+        <div class="field-container">
+            <div class="field-group">
+                <label for="active">Regime Tributário</label>
+
+                <select name="active">
+                    <option value="">Simples Nacional</option>
+                    <option value="">Lucro Presumido</option>
+                    <option value="">Lucro Real</option>
+                </select>
+
+                <label for="">CNPJ</label>
+                <input type="text" name="cnpj">
+            </div>
+
+            <div class="field-group">
+                <label for="">Inscr.Estadual</label>
+                <input type="text" name="">
+
+                <label for="">Fundação</label>
+                <input type="date" max="9999-12-31" name="">
+            </div>
+
+            <div class="field-group">
+                <fieldset>
+
+                    <legend>Tipo Pessoa</legend>
+
+                    <div class="fieldset-container">
+                        <div class="content-fieldset">
+                            <input class="radio" type="radio" id="physical-person" name="people-type" value="fisica"
+                                checked="checked">
+                            <label for="physical-person">Física</label>
+                        </div>
+
+                        <div class="content-fieldset">
+                            <input class="radio" type="radio" id="legal-person" name="people-type" value="juridica">
+                            <label for="legal-person">Jurídica</label>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="field-group">
+                <fieldset>
+
+                    <legend>Tipo Contribuinte</legend>
+
+                    <div class="fieldset-container big-field">
+                        <div class="content-fieldset">
+                            <input class="radio" type="radio" id="taxpayer" name="taxpayer" value="" checked="checked">
+                            <label for="taxpayer">Contribuinte</label>
+                        </div>
+                        <div class="content-fieldset">
+                            <input class="radio" type="radio" id="non-taxpayer" name="taxpayer" value="">
+                            <label for="non-taxpayer">Não Contribuinte</label>
+                        </div>
+                        <div class="content-fieldset">
+                            <input class="radio" type="radio" id="free" name="taxpayer" value="">
+                            <label for="free">Isento</label>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+    <!-- Terceiro campo (correios)-->
+    <div class="field-form correios buttons">
+        <div class="header-container">
+
+            <a class="active">Endereço</a>
+            <a>Cobrança</a>
+
+            <div class="check-group">
+                <div class="checkbox">
+                    <input type="checkbox" name="cheque">
+                    <label for="cheque">Permite Venda Crédiario/Boleto</label>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" name="boleto">
+                    <label for="boleto">Permite Venda Cheque Pré</label>
+                </div>
+            </div>
+            <img src="/icons/correios.png" alt="">
+        </div>
+
+        <div class="field-container">
+            <div class="field-group">
+                <label for="">Cep</label>
+                <input type="text" maxlength="8" name="">
+            </div>
+            <div class="field-group">
+                <label for="">Endereço</label>
+                <input type="text" name="">
+            </div>
+            <div class="field-group">
+                <label for="">Número</label>
+                <input type="number" name="">
+            </div>
+        </div>
+        <div class="field-container">
+            <div class="field-group">
+                <label for="">Bairro</label>
+                <input type="text" name="">
+            </div>
+            <div class="field-group">
+                <label for="city">Cidade</label>
+                <select name="city">
+                    <option value="">Selecione a Cidade</option>
+                </select>
+            </div>
+            <div class="field-group">
+                <label for="">Cd.NFe</label>
+                <input type="text" name="">
+            </div>
+            <div class="field-group">
+                <label for="uf">UF</label>
+                <select name="uf">
+                    <option value="">Selecione a Região</option>
+                </select>
+            </div>
+            <div class="field-group">
+                <label for="">Próx. revisão</label>
+                <input type="date" name="">
+            </div>
+        </div>
+    </div>
+    <div class="field-form">
+        <div class="field-container">
+            <div class="field-group">
+                <label for="">Fone 1</label>
+                <input type="text" name="">
+            </div>
+            <div class="field-group">
+                <label for="">Fone 2</label>
+                <input type="text" name="">
+            </div>
+            <div class="field-group">
+                <label for="">Fax</label>
+                <input type="text" name="">
+            </div>
+            <div class="field-group">
+                <label for="">Email</label>
+                <input type="text" name="">
+            </div>
+            <div class="field-group">
+                <label for="">Insc.Municipal</label>
+                <input type="text" name="">
+            </div>
+        </div>
+        <div class="field-container">
+            <div class="field-group">
+                <label for="">Renda/Fatura</label>
+                <input type="text" name="">
+            </div>
+            <div class="field-group">
+                <label for="">Lim.Original</label>
+                <input type="text" name="">
+            </div>
+            <div class="field-group">
+                <label for="">Tipo de Cliente</label>
+                <select name="uf">
+                    <option value="">Selecione</option>
+                </select>
+            </div>
+            <div class="field-group">
+                <label for="">Ramo</label>
+                <select name="uf">
+                    <option value="">Selecione o Ramo</option>
+                </select>
+            </div>
+            <div class="field-group">
+                <label for="">Chek-Chek</label>
+                <input type="text" name="">
+            </div>
+        </div>
+        <div class="field-container">
+
+            <div class="field-group">
+                <label for="">Vendedor</label>
+                <select name="uf">
+                    <option value="">Selecione o Vendedor</option>
+                </select>
+            </div>
+            <div class="field-group">
+                <label for="">Representante</label>
+                <select name="uf">
+                    <option value="">Selecione o Representante</option>
+                </select>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="field-form observacao buttons">
+        <div class="header-container">
+
+            <a class="active">Observação 1</a>
+            <a>Observação 2</a>
+            <a>Obs.Cobrança</a>
+
+        </div>
+        <div class="field-container">
+            <div class="field-group">
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+            </div>
+        </div>
+    </div>
+</form>
+
+{% block scripts %}
+<script src="/scripts/toggle_active.js"></script>
+{% endblock scripts %}
+
+{% endblock content %}

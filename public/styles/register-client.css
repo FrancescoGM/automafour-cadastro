@@ -1,0 +1,35 @@
+.field-form img {
+    right: -280px;
+    position: absolute;
+    width: 40px;
+}
+
+form .field-form:nth-child(2) input[type="text"], select {
+    margin-bottom: 4px;
+}
+
+form .field-form:nth-child(2) .field-group fieldset {
+    height: 100%;
+}
+
+form .field-form:nth-child(2) .field-group:last-child fieldset .fieldset-container {
+    grid-template-columns: 1fr;
+    text-align: left;
+    margin-left: 8px;
+}
+
+form .field-form:nth-child(4) input {
+    width: 100%;
+}
+
+form .field-form:nth-child(4) .field-container:first-child .field-group:nth-child(4) {
+    flex: 2;
+}
+
+form .field-form:nth-child(4) .field-container:nth-child(2) .field-group:nth-child(1), .field-group:nth-child(2) {
+    flex: 0.5;
+}
+
+form .field-form:nth-child(4) .field-container:nth-child(3) .field-group {
+    flex: 1;
+}

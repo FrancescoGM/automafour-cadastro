@@ -1,0 +1,23 @@
+.correios img {
+    width: 40px;
+    top: 4px;
+    right: 4px;
+    border-radius: 30%;
+}
+
+.correios .check-group {
+    height: 16px;
+    padding: 4px 16px;
+    margin: auto 20px;
+    border-radius: 4px;
+    display: flex;
+    background-color: white;
+}
+
+.correios .checkbox:first-child {
+    margin-right: 20px;
+}
+
+.correios .field-container:nth-child(2) .field-group:nth-child(2) {
+    flex: 2;
+}

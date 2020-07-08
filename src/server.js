@@ -1,12 +1,16 @@
-const firebird = require('node-firebird')
-const options = {}
-options.host = '127.0.0.1';
-options.port = 3050;
-options.database = 'BANCO.FDB';
-options.user = 'SYSDBA';
-options.password = 'masterkey';
-options.lowercase_keys = false; // set to true to lowercase keys
-options.role = null;            // default
-options.pageSize = 4096;
+const express = require('express')
+const nunjucks = require('nunjucks')
+const routes = require('./routes')
+const server = express()
 
-var sql1 = 'SELECT * FROM TBL_USER WHERE ID>' + firebird.escape(1);
+server.use(express.urlencoded({ extended: true }))
+server.use(express.static('public'))
+server.set('view engine', 'html')
+server.use(routes)
+
+nunjucks.configure('src/views', {
+    express: server,
+    noCache: true,
+    autoescape: false
+})
+server.listen(5000)

@@ -1,0 +1,16 @@
+@media (max-width: 400px) {
+    form .field-form {
+        flex-direction: column;
+    }
+    input[type="text"], input[type="date"], select {
+        padding: 8px 2px !important;
+        margin-bottom: 20px !important;
+        min-width: 220px !important;
+    }
+    form .field-group fieldset {
+        width: 220px !important;
+    }
+    form .field-group fieldset input[type="radio"] {
+        width: 13px;
+    }
+}
