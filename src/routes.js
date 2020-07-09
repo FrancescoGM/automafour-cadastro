@@ -1,4 +1,5 @@
 const express = require('express')
+const db = require('./database/db')
 const routes = express.Router()
 
 routes.get('/', (req, res) => {
@@ -10,5 +11,7 @@ routes.get('/register-client', (req, res) => {
 routes.get('/clients', (req, res) => {
     res.render('pages/clients')
 })
-
+routes.post('/register-client', (req, res) => {
+    console.log(req.body)
+})
 module.exports = routes

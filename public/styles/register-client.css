@@ -4,6 +4,10 @@
     width: 40px;
 }
 
+form .field-form:first-child .field-group:nth-child(4), .field-group:nth-child(5) {
+    flex: 2;
+}
+
 form .field-form:nth-child(2) input[type="text"], select {
     margin-bottom: 4px;
 }
@@ -23,13 +27,19 @@ form .field-form:nth-child(4) input {
 }
 
 form .field-form:nth-child(4) .field-container:first-child .field-group:nth-child(4) {
-    flex: 2;
-}
-
-form .field-form:nth-child(4) .field-container:nth-child(2) .field-group:nth-child(1), .field-group:nth-child(2) {
-    flex: 0.5;
+    flex: 1.5;
 }
 
 form .field-form:nth-child(4) .field-container:nth-child(3) .field-group {
     flex: 1;
+}
+
+form .field-form:nth-child(4) .field-container:nth-child(2) .field-group:last-child select {
+    margin-left: auto;
+    width: 100px;
+}
+
+form .field-form:nth-child(4) .field-container:nth-child(2) .field-group:last-child label {
+    text-align: right;
+    margin-right: 16px;
 }

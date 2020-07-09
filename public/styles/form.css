@@ -26,6 +26,7 @@ form {
     display: flex;
     flex-direction: column;
     flex: 1;
+    position: relative;
 }
 
 .field-group label {
@@ -91,6 +92,7 @@ form .field-form:nth-child(2) input[type="text"] {
 
 .buttons a.active {
     background-color: #666666;
+    text-decoration: underline;
 }
 
 .buttons .header-container {
@@ -108,4 +110,23 @@ form .field-form:nth-child(2) input[type="text"] {
     flex-direction: column;
     flex-wrap: wrap;
     background-color: #00000011;
+}
+
+.field-container.observacao {
+    display: none;
+}
+
+textarea[name=observacao] {
+    width: 100%;
+    height: 156px;
+    box-sizing: border-box;
+    resize: none;
+    outline: none;
+    margin: 0;
+    padding: 10px;
+}
+
+button[type=submit] {
+    width: 400px;
+    height: 60px;
 }

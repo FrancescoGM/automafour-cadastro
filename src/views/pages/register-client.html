@@ -11,61 +11,64 @@
 <form action="" method="post">
     <!-- Primeiro campo -->
     <div class="field-form">
+
         <div class="field-container">
+
             <div class="field-group">
-                <label for="">ID</label>
+                <label for="id">ID</label>
                 <input type="text" name="id">
             </div>
 
             <div class="field-group">
                 <label for="active">Ativo</label>
-                <select name="active">
-                    <option value="yes">Sim</option>
-                    <option value="no">Não</option>
+                <select name="ativo">
+                    <option value="Sim">Sim</option>
+                    <option value="Não">Não</option>
                 </select>
             </div>
 
             <div class="field-group">
                 <label for="">Usar P.Venda</label>
-                <select name="active">
-                    <option value="1">Atacado 1</option>
-                    <option value="2">Atacado 2</option>
+                <select name="usar_venda">
+                    <option value="Atacado_1">Atacado 1</option>
+                    <option value="Atacado_2">Atacado 2</option>
                 </select>
             </div>
 
             <div class="field-group">
-                <label for="fantasy-name">Nome Completo/Razão Social</label>
-                <input type="text" name="company-name">
+                <label for="nome_empresa">Nome Completo/Razão Social</label>
+                <input type="text" name="nome_empresa">
             </div>
 
             <div class="field-group">
-                <label for="fantasy-name">Nome Fantasia</label>
-                <input type="text" name="fantasy-name">
+                <label for="nome_fantasia">Nome Fantasia</label>
+                <input type="text" name="nome_fantasia">
             </div>
         </div>
     </div>
     <!-- Segundo campo -->
     <div class="field-form">
-        <div class="field-container">
-            <div class="field-group">
-                <label for="active">Regime Tributário</label>
 
-                <select name="active">
-                    <option value="">Simples Nacional</option>
-                    <option value="">Lucro Presumido</option>
-                    <option value="">Lucro Real</option>
+        <div class="field-container">
+
+            <div class="field-group">
+                <label for="regime_tributario">Regime Tributário</label>
+                <select name="regime_tributario">
+                    <option value="Simples Nacional">Simples Nacional</option>
+                    <option value="Lucro Presumido">Lucro Presumido</option>
+                    <option value="Lucro Real">Lucro Real</option>
                 </select>
 
-                <label for="">CNPJ</label>
+                <label for="cnpj">CNPJ</label>
                 <input type="text" name="cnpj">
             </div>
 
             <div class="field-group">
-                <label for="">Inscr.Estadual</label>
-                <input type="text" name="">
+                <label for="inscricao_estadual">Inscr.Estadual</label>
+                <input type="text" name="inscricao_estadual">
 
-                <label for="">Fundação</label>
-                <input type="date" max="9999-12-31" name="">
+                <label for="fundacao">Fundação</label>
+                <input type="date" max="9999-12-31" name="fundacao">
             </div>
 
             <div class="field-group">
@@ -75,18 +78,19 @@
 
                     <div class="fieldset-container">
                         <div class="content-fieldset">
-                            <input class="radio" type="radio" id="physical-person" name="people-type" value="fisica"
+                            <input class="radio" type="radio" id="pessoa_fisica" name="tipo_pessoa" value="Física"
                                 checked="checked">
-                            <label for="physical-person">Física</label>
+                            <label for="pessoa_fisica">Física</label>
                         </div>
 
                         <div class="content-fieldset">
-                            <input class="radio" type="radio" id="legal-person" name="people-type" value="juridica">
-                            <label for="legal-person">Jurídica</label>
+                            <input class="radio" type="radio" id="pessoa_juridica" name="tipo_pessoa" value="Jurídica">
+                            <label for="pessoa_juridica">Jurídica</label>
                         </div>
                     </div>
                 </fieldset>
             </div>
+
             <div class="field-group">
                 <fieldset>
 
@@ -94,24 +98,28 @@
 
                     <div class="fieldset-container big-field">
                         <div class="content-fieldset">
-                            <input class="radio" type="radio" id="taxpayer" name="taxpayer" value="" checked="checked">
-                            <label for="taxpayer">Contribuinte</label>
+                            <input class="radio" type="radio" id="contribuinte" name="tipo_contribuinte"
+                                value="Contribuinte" checked="checked">
+                            <label for="contribuinte">Contribuinte</label>
                         </div>
                         <div class="content-fieldset">
-                            <input class="radio" type="radio" id="non-taxpayer" name="taxpayer" value="">
-                            <label for="non-taxpayer">Não Contribuinte</label>
+                            <input class="radio" type="radio" id="nao_contribuinte" name="tipo_contribuinte"
+                                value="Não Contribuinte">
+                            <label for="nao_contribuinte">Não Contribuinte</label>
                         </div>
                         <div class="content-fieldset">
-                            <input class="radio" type="radio" id="free" name="taxpayer" value="">
-                            <label for="free">Isento</label>
+                            <input class="radio" type="radio" id="isento" name="tipo_contribuinte" value="Isento">
+                            <label for="isento">Isento</label>
                         </div>
                     </div>
                 </fieldset>
             </div>
         </div>
     </div>
+
     <!-- Terceiro campo (correios)-->
     <div class="field-form correios buttons">
+
         <div class="header-container">
 
             <a class="active">Endereço</a>
@@ -119,143 +127,244 @@
 
             <div class="check-group">
                 <div class="checkbox">
-                    <input type="checkbox" name="cheque">
-                    <label for="cheque">Permite Venda Crédiario/Boleto</label>
+                    <input type="checkbox" name="permite_crediario">
+                    <label for="permite_crediario">Permite Venda Crédiario/Boleto</label>
                 </div>
-                <div class="checkbox">
-                    <input type="checkbox" name="boleto">
-                    <label for="boleto">Permite Venda Cheque Pré</label>
-                </div>
-            </div>
-            <img src="/icons/correios.png" alt="">
-        </div>
 
-        <div class="field-container">
-            <div class="field-group">
-                <label for="">Cep</label>
-                <input type="text" maxlength="8" name="">
+                <div class="checkbox">
+                    <input type="checkbox" name="permite_cheque">
+                    <label for="permite_cheque">Permite Venda Cheque Pré</label>
+                </div>
             </div>
-            <div class="field-group">
-                <label for="">Endereço</label>
-                <input type="text" name="">
+
+            <img src="/icons/correios.png" alt="imagem correios">
+
+        </div>
+        <div class="correios-container" style="display: block;">
+
+            <div class="field-container">
+
+                <div class="field-group">
+                    <label for="endereco_cep">Cep</label>
+                    <input type="text" maxlength="8" name="endereco_cep">
+                </div>
+
+                <div class="field-group">
+                    <label for="endereco_endereco">Endereço</label>
+                    <input type="text" name="endereco_endereco">
+                </div>
+
+                <div class="field-group">
+                    <label for="endereco_numero">Número</label>
+                    <input type="number" name="endereco_numero">
+                </div>
             </div>
-            <div class="field-group">
-                <label for="">Número</label>
-                <input type="number" name="">
+
+            <div class="field-container">
+
+                <div class="field-group">
+                    <label for="endereco_bairro">Bairro</label>
+                    <input type="text" name="endereco_bairro">
+                </div>
+
+                <div class="field-group">
+                    <label for="city">Cidade</label>
+                    <select name="city">
+                        <option value="">Selecione a Cidade</option>
+                    </select>
+                </div>
+
+                <div class="field-group">
+                    <label for="endereco_codigo">Cd.NFe</label>
+                    <input type="text" name="endereco_codigo">
+                </div>
+
+                <div class="field-group">
+                    <label for="state">UF</label>
+                    <select name="uf">
+                        <option value="">Selecione a Região</option>
+                    </select>
+                    <input type="hidden" name="state">
+                </div>
+
+                <div class="field-group">
+                    <label for="endereco_proxima_revisao">Próx. revisão</label>
+                    <input type="date" name="endereco_proxima_revisao">
+                </div>
             </div>
         </div>
-        <div class="field-container">
-            <div class="field-group">
-                <label for="">Bairro</label>
-                <input type="text" name="">
+        <div class="correios-container" style="display: none;">
+
+            <div class="field-container">
+
+                <div class="field-group">
+                    <label for="cobranca_cep">Cep</label>
+                    <input type="text" maxlength="8" name="cobranca_cep">
+                </div>
+
+                <div class="field-group">
+                    <label for="cobranca_endereco">Endereço</label>
+                    <input type="text" name="cobranca_endereco">
+                </div>
+
+                <div class="field-group">
+                    <label for="cobranca_numero">Número</label>
+                    <input type="number" name="cobranca_numero">
+                </div>
             </div>
-            <div class="field-group">
-                <label for="city">Cidade</label>
-                <select name="city">
-                    <option value="">Selecione a Cidade</option>
-                </select>
-            </div>
-            <div class="field-group">
-                <label for="">Cd.NFe</label>
-                <input type="text" name="">
-            </div>
-            <div class="field-group">
-                <label for="uf">UF</label>
-                <select name="uf">
-                    <option value="">Selecione a Região</option>
-                </select>
-            </div>
-            <div class="field-group">
-                <label for="">Próx. revisão</label>
-                <input type="date" name="">
+
+            <div class="field-container">
+
+                <div class="field-group">
+                    <label for="cobranca_bairro">Bairro</label>
+                    <input type="text" name="cobranca_bairro">
+                </div>
+
+                <div class="field-group">
+                    <label for="city">Cidade</label>
+                    <select name="city">
+                        <option value="">Selecione a Cidade</option>
+                    </select>
+                </div>
+
+                <div class="field-group">
+                    <label for="cobranca_codigo_nfe">Cd.NFe</label>
+                    <input type="text" name="cobranca_codigo_nfe">
+                </div>
+
+                <div class="field-group">
+                    <label for="state">UF</label>
+                    <select name="uf">
+                        <option value="">Selecione a Região</option>
+                    </select>
+                    <input type="hidden" name="state">
+                </div>
+
+                <div class="field-group">
+                    <label for="cobranca_proxima_revisao">Próx. revisão</label>
+                    <input type="date" name="cobranca_proxima_revisao">
+                </div>
             </div>
         </div>
     </div>
+
+    <!-- Quarto campo -->
     <div class="field-form">
-        <div class="field-container">
-            <div class="field-group">
-                <label for="">Fone 1</label>
-                <input type="text" name="">
-            </div>
-            <div class="field-group">
-                <label for="">Fone 2</label>
-                <input type="text" name="">
-            </div>
-            <div class="field-group">
-                <label for="">Fax</label>
-                <input type="text" name="">
-            </div>
-            <div class="field-group">
-                <label for="">Email</label>
-                <input type="text" name="">
-            </div>
-            <div class="field-group">
-                <label for="">Insc.Municipal</label>
-                <input type="text" name="">
-            </div>
-        </div>
-        <div class="field-container">
-            <div class="field-group">
-                <label for="">Renda/Fatura</label>
-                <input type="text" name="">
-            </div>
-            <div class="field-group">
-                <label for="">Lim.Original</label>
-                <input type="text" name="">
-            </div>
-            <div class="field-group">
-                <label for="">Tipo de Cliente</label>
-                <select name="uf">
-                    <option value="">Selecione</option>
-                </select>
-            </div>
-            <div class="field-group">
-                <label for="">Ramo</label>
-                <select name="uf">
-                    <option value="">Selecione o Ramo</option>
-                </select>
-            </div>
-            <div class="field-group">
-                <label for="">Chek-Chek</label>
-                <input type="text" name="">
-            </div>
-        </div>
+
         <div class="field-container">
 
             <div class="field-group">
-                <label for="">Vendedor</label>
-                <select name="uf">
+                <label for="telefone_um">Fone 1</label>
+                <input type="text" name="telefone_um">
+            </div>
+
+            <div class="field-group">
+                <label for="telefone_dois">Fone 2</label>
+                <input type="text" name="telefone_dois">
+            </div>
+
+            <div class="field-group">
+                <label for="fax">Fax</label>
+                <input type="text" name="fax">
+            </div>
+
+            <div class="field-group">
+                <label for="email">Email</label>
+                <input type="text" name="email">
+            </div>
+
+            <div class="field-group">
+                <label for="inscricao_municipal">Insc.Municipal</label>
+                <input type="text" name="inscricao_municipal">
+            </div>
+        </div>
+
+        <div class="field-container">
+
+            <div class="field-group">
+                <label for="renda">Renda/Fatura</label>
+                <input type="text" name="renda">
+            </div>
+
+            <div class="field-group">
+                <label for="limite_original">Lim.Original</label>
+                <input type="text" name="limite_original">
+            </div>
+
+            <div class="field-group">
+                <label for="tipo_cliente">Tipo de Cliente</label>
+                <select name="tipo_cliente">
+                    <option value="Cliente 1">Cliente 1</option>
+                    <option value="Cliente 2">Cliente 2</option>
+                </select>
+            </div>
+
+            <div class="field-group">
+                <label for="ramo">Ramo</label>
+                <select name="ramo">
+                    <option value="Auto Peças">Auto Peças</option>
+                    <option value="Imobiliária">Imobiliária</option>
+                </select>
+            </div>
+
+            <div class="field-group">
+                <label for="check">Chek-Chek</label>
+
+                <select name="check">
+                    <option value="true">true</option>
+                    <option value="false">false</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="field-container">
+
+            <div class="field-group">
+                <label for="vendedor">Vendedor</label>
+                <select name="vendedor">
                     <option value="">Selecione o Vendedor</option>
                 </select>
             </div>
+
             <div class="field-group">
-                <label for="">Representante</label>
-                <select name="uf">
+                <label for="representante">Representante</label>
+                <select name="representante">
                     <option value="">Selecione o Representante</option>
                 </select>
             </div>
-
         </div>
     </div>
 
+    <!-- Quinto Campo -->
     <div class="field-form observacao buttons">
+
         <div class="header-container">
 
             <a class="active">Observação 1</a>
             <a>Observação 2</a>
             <a>Obs.Cobrança</a>
-
         </div>
-        <div class="field-container">
+
+        <div class="field-container observacao" style="display:block;">
             <div class="field-group">
-                <textarea name="" id="" cols="30" rows="10"></textarea>
+                <textarea name="observacao_um" id="" cols="30" rows="10"></textarea>
+            </div>
+        </div>
+        <div class="field-container observacao">
+            <div class="field-group">
+                <textarea name="observacao_dois" id="" cols="30" rows="10"></textarea>
+            </div>
+        </div>
+        <div class="field-container observacao">
+            <div class="field-group">
+                <textarea name="observacao_cobranca" id="" cols="30" rows="10"></textarea>
             </div>
         </div>
     </div>
+    <button type="submit"></button>
 </form>
-
-{% block scripts %}
+<script src="/scripts/populate_uf.js"></script>
 <script src="/scripts/toggle_active.js"></script>
-{% endblock scripts %}
+
 
 {% endblock content %}
