@@ -15,21 +15,8 @@
         <div class="field-container">
 
             <div class="field-group">
-                <label for="id">ID</label>
-                <input type="text" name="id">
-            </div>
-
-            <div class="field-group">
-                <label for="active">Ativo</label>
-                <select name="ativo">
-                    <option value="Sim">Sim</option>
-                    <option value="Não">Não</option>
-                </select>
-            </div>
-
-            <div class="field-group">
                 <label for="">Usar P.Venda</label>
-                <select name="usar_venda">
+                <select required name="usar_venda">
                     <option value="Atacado_1">Atacado 1</option>
                     <option value="Atacado_2">Atacado 2</option>
                 </select>
@@ -37,12 +24,12 @@
 
             <div class="field-group">
                 <label for="nome_empresa">Nome Completo/Razão Social</label>
-                <input type="text" name="nome_empresa">
+                <input required type="text" name="nome_empresa">
             </div>
 
             <div class="field-group">
                 <label for="nome_fantasia">Nome Fantasia</label>
-                <input type="text" name="nome_fantasia">
+                <input required type="text" name="nome_fantasia">
             </div>
         </div>
     </div>
@@ -53,22 +40,22 @@
 
             <div class="field-group">
                 <label for="regime_tributario">Regime Tributário</label>
-                <select name="regime_tributario">
+                <select required name="regime_tributario">
                     <option value="Simples Nacional">Simples Nacional</option>
                     <option value="Lucro Presumido">Lucro Presumido</option>
                     <option value="Lucro Real">Lucro Real</option>
                 </select>
 
                 <label for="cnpj">CNPJ</label>
-                <input type="text" name="cnpj">
+                <input required type="text" name="cnpj">
             </div>
 
             <div class="field-group">
-                <label for="inscricao_estadual">Inscr.Estadual</label>
+                <label required for="inscricao_estadual">Inscr.Estadual</label>
                 <input type="text" name="inscricao_estadual">
 
-                <label for="fundacao">Fundação</label>
-                <input type="date" max="9999-12-31" name="fundacao">
+                <label required for="fundacao">Fundação</label>
+                <input type="date" max="{{ year }}-12-31" name="fundacao">
             </div>
 
             <div class="field-group">
@@ -146,17 +133,17 @@
 
                 <div class="field-group">
                     <label for="endereco_cep">Cep</label>
-                    <input type="text" maxlength="8" name="endereco_cep">
+                    <input required type="text" maxlength="8" name="endereco_cep">
                 </div>
 
                 <div class="field-group">
                     <label for="endereco_endereco">Endereço</label>
-                    <input type="text" name="endereco_endereco">
+                    <input required type="text" name="endereco_endereco">
                 </div>
 
                 <div class="field-group">
                     <label for="endereco_numero">Número</label>
-                    <input type="number" name="endereco_numero">
+                    <input required type="number" name="endereco_numero">
                 </div>
             </div>
 
@@ -164,24 +151,24 @@
 
                 <div class="field-group">
                     <label for="endereco_bairro">Bairro</label>
-                    <input type="text" name="endereco_bairro">
+                    <input required type="text" name="endereco_bairro">
                 </div>
 
                 <div class="field-group">
                     <label for="city">Cidade</label>
-                    <select name="city">
+                    <select required name="city">
                         <option value="">Selecione a Cidade</option>
                     </select>
                 </div>
 
                 <div class="field-group">
                     <label for="endereco_codigo">Cd.NFe</label>
-                    <input type="text" name="endereco_codigo">
+                    <input required type="text" name="endereco_codigo">
                 </div>
 
                 <div class="field-group">
                     <label for="state">UF</label>
-                    <select name="uf">
+                    <select required name="uf">
                         <option value="">Selecione a Região</option>
                     </select>
                     <input type="hidden" name="state">
@@ -189,7 +176,7 @@
 
                 <div class="field-group">
                     <label for="endereco_proxima_revisao">Próx. revisão</label>
-                    <input type="date" name="endereco_proxima_revisao">
+                    <input required type="date" max="{{ maxYear }}-12-31" name="endereco_proxima_revisao">
                 </div>
             </div>
         </div>
@@ -242,7 +229,7 @@
 
                 <div class="field-group">
                     <label for="cobranca_proxima_revisao">Próx. revisão</label>
-                    <input type="date" name="cobranca_proxima_revisao">
+                    <input type="date" max="{{ maxYear }}-12-31" name="cobranca_proxima_revisao">
                 </div>
             </div>
         </div>
@@ -254,7 +241,7 @@
         <div class="field-container">
 
             <div class="field-group">
-                <label for="telefone_um">Fone 1</label>
+                <label required for="telefone_um">Fone 1</label>
                 <input type="text" name="telefone_um">
             </div>
 
@@ -270,12 +257,12 @@
 
             <div class="field-group">
                 <label for="email">Email</label>
-                <input type="text" name="email">
+                <input required type="text" name="email">
             </div>
 
             <div class="field-group">
                 <label for="inscricao_municipal">Insc.Municipal</label>
-                <input type="text" name="inscricao_municipal">
+                <input required type="text" name="inscricao_municipal">
             </div>
         </div>
 
@@ -283,17 +270,17 @@
 
             <div class="field-group">
                 <label for="renda">Renda/Fatura</label>
-                <input type="text" name="renda">
+                <input required type="text" name="renda">
             </div>
 
             <div class="field-group">
                 <label for="limite_original">Lim.Original</label>
-                <input type="text" name="limite_original">
+                <input required type="text" name="limite_original">
             </div>
 
             <div class="field-group">
                 <label for="tipo_cliente">Tipo de Cliente</label>
-                <select name="tipo_cliente">
+                <select required name="tipo_cliente">
                     <option value="Cliente 1">Cliente 1</option>
                     <option value="Cliente 2">Cliente 2</option>
                 </select>
@@ -301,7 +288,7 @@
 
             <div class="field-group">
                 <label for="ramo">Ramo</label>
-                <select name="ramo">
+                <select required name="ramo">
                     <option value="Auto Peças">Auto Peças</option>
                     <option value="Imobiliária">Imobiliária</option>
                 </select>
@@ -321,15 +308,21 @@
 
             <div class="field-group">
                 <label for="vendedor">Vendedor</label>
-                <select name="vendedor">
-                    <option value="">Selecione o Vendedor</option>
+                <div class="add-container">
+                    <a>Adcionar</a>
+                    <input type="text">
+                </div>
+                <select required name="vendedor">
                 </select>
             </div>
 
             <div class="field-group">
                 <label for="representante">Representante</label>
-                <select name="representante">
-                    <option value="">Selecione o Representante</option>
+                <div class="add-container">
+                    <a>Adcionar</a>
+                    <input type="text">
+                </div>
+                <select required name="representante">
                 </select>
             </div>
         </div>
@@ -361,8 +354,11 @@
             </div>
         </div>
     </div>
-    <button type="submit"></button>
+    <div class="field-form">
+        <button type="submit">Enviar</button>
+    </div>
 </form>
+<script src="/scripts/input_add.js"></script>
 <script src="/scripts/populate_uf.js"></script>
 <script src="/scripts/toggle_active.js"></script>
 

@@ -1,0 +1,33 @@
+{% extends 'layouts/layout.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="/styles/table-clients.css">
+{% endblock head %}
+
+{% block content %}
+
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Empresa</th>
+            <th>Telefone</th>
+            <th>Ação</th>
+        </tr>
+    </thead>
+    <tbody>
+        <h1>clients</h1>
+        {% for client in clients %}
+        <tr>
+            <td>{{ client.id }}</td>
+            <td>{{ client.nome_empresa }}</td>
+            <td>{{ client.telefone_um}}</td>
+            <td>
+                <a href="/instructors/{{ instructor.id }}">Detalhes</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock content %}

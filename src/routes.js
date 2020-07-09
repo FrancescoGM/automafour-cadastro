@@ -6,12 +6,124 @@ routes.get('/', (req, res) => {
     res.render('pages/home')
 })
 routes.get('/register-client', (req, res) => {
-    res.render('pages/register-client')
+    res.render('pages/register-client', { year: 2020, maxYear: 2040 })
 })
 routes.get('/clients', (req, res) => {
-    res.render('pages/clients')
+    db.all(`SELECT * FROM clientes`, function (err, rows) {
+        if (err) {
+            return console.log(err)
+        } else {
+            res.render('pages/table-clients', { clients: rows })
+        }
+    })
 })
+
 routes.post('/register-client', (req, res) => {
-    console.log(req.body)
+    const values = [
+        /*req.body.ativo*/"Sim",
+        req.body.usar_venda,
+        req.body.nome_empresa,
+        req.body.nome_fantasia,
+        req.body.regime_tributario,
+        req.body.cnpj,
+        req.body.inscricao_estadual,
+        req.body.fundacao,
+        req.body.tipo_pessoa,
+        req.body.tipo_contribuinte,
+        req.body.permite_cediario == undefined ? false : true,
+        req.body.permite_cheque == undefined ? false : true,
+        req.body.endereco_cep,
+        req.body.endereco_endereco,
+        req.body.endereco_numero,
+        req.body.endereco_bairro,
+        /*req.body.endereco_cidade*/ req.body.city[0],
+        req.body.endereco_codigo_nfe,
+        /*req.body.endereco_estado*/ req.body.uf[0],
+        req.body.endereco_proxima_revisao,
+        req.body.cobranca_cep,
+        req.body.cobranca_endereco,
+        req.body.cobranca_numero,
+        req.body.cobranca_bairro,
+        /*req.body.cobranca_cidade*/ req.body.city[1],
+        req.body.cobranca_codigo_nfe,
+        /*req.body.cobranca_estado*/ req.body.uf[1],
+        req.body.cobranca_proxima_revisao,
+        req.body.telefone_um,
+        req.body.telefone_dois,
+        req.body.fax,
+        req.body.email,
+        req.body.inscricao_municipal,
+        req.body.renda,
+        req.body.limite_original,
+        req.body.tipo_cliente,
+        req.body.lista_tipo_cliente,
+        req.body.ramo,
+        req.body.check_Check,
+        req.body.vendedor,
+        /*req.body.lista_vendedor*/ req.body.vendedor,
+        req.body.representante,
+        /*req.body.lista_representante*/ req.body.representante,
+        req.body.observacao_um,
+        req.body.observacao_dois,
+        req.body.observacao_cobranca
+    ]
+    const query = `
+    INSERT INTO clientes (
+        ativo,
+        usar_venda,
+        nome_empresa,
+        nome_fantasia,
+        regime_tributario,
+        cnpj,
+        inscricao_estadual,
+        fundacao,
+        tipo_pessoa,
+        tipo_contribuinte,
+        permite_cediario,
+        permite_cheque,
+        endereco_cep,
+        endereco_endereco,
+        endereco_numero,
+        endereco_bairro,
+        endereco_cidade,
+        endereco_codigo_nfe,
+        endereco_estado,
+        endereco_proxima_revisao,
+        cobranca_cep,
+        cobranca_endereco,
+        cobranca_numero,
+        cobranca_bairro,
+        cobranca_cidade,
+        cobranca_codigo_nfe,
+        cobranca_estado,
+        cobranca_proxima_revisao,
+        telefone_um,
+        telefone_dois,
+        fax,
+        email,
+        inscricao_municipal,
+        renda,
+        limite_original,
+        tipo_cliente,
+        lista_tipo_cliente,
+        ramo,
+        check_Check,
+        vendedor,
+        lista_vendedor,
+        representante,
+        lista_representante,
+        observacao_um,
+        observacao_dois,
+        observacao_cobranca
+        ) VALUES 
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+        `
+    function afterInsertData(err) {
+        if (err) {
+            return console.log(err)
+        }
+        return res.redirect("/")
+    }
+    db.run(query, values, afterInsertData)
 })
 module.exports = routes
