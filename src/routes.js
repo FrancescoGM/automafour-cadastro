@@ -25,7 +25,6 @@ routes.get('/clients/:id', (req, res) => {
             const row = rows.filter((row) => {
                 return row.id == req.params.id
             })
-            console.log(row)
             res.render('pages/client', { client: row[0] })
         }
     })
