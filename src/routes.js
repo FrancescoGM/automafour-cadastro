@@ -32,7 +32,7 @@ routes.get('/clients/:id', (req, res) => {
 })
 routes.post('/register-client', (req, res) => {
     const values = [
-        /*req.body.ativo*/"Sim",
+        /*req.body.ativo*/'Sim',
         req.body.usar_venda,
         req.body.nome_empresa,
         req.body.nome_fantasia,
@@ -42,8 +42,8 @@ routes.post('/register-client', (req, res) => {
         req.body.fundacao,
         req.body.tipo_pessoa,
         req.body.tipo_contribuinte,
-        req.body.permite_cediario == undefined ? false : true,
-        req.body.permite_cheque == undefined ? false : true,
+        req.body.permite_cediario == undefined ? 'Não' : 'Sim',
+        req.body.permite_cheque == undefined ? 'Não' : 'Sim',
         req.body.endereco_cep,
         req.body.endereco_endereco,
         req.body.endereco_numero,
