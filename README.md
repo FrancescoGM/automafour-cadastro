@@ -8,7 +8,7 @@ Foram 2 dias desenvolvendo o máximo possível do projeto, praticamente comendo 
 
 O primeiro dia foi focado para fazer o front-end, e o segundo dia para configurar direitinho os dados e o servidor, claro que conforme fazia um, alterava coisas do outro.
 
-Como o tempo era bem curto não tive como fazer coisas como tratamento de dados, verificação, entre outros, fiz o máximo que eu sabia, pois pesquisar por coisas para aprender levaria muito tempo que eu não podia gastar.
+Como o tempo era bem curto não tive como fazer coisas como tratamento de dados, verificação, entre outros, fiz o máximo que eu sabia, pois pesquisar por coisas novas levaria muito tempo que eu não podia gastar.
 
 ---
 
