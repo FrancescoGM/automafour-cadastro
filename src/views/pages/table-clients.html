@@ -16,14 +16,13 @@
         </tr>
     </thead>
     <tbody>
-        <h1>clients</h1>
         {% for client in clients %}
         <tr>
             <td>{{ client.id }}</td>
             <td>{{ client.nome_empresa }}</td>
             <td>{{ client.telefone_um}}</td>
             <td>
-                <a href="/instructors/{{ instructor.id }}">Detalhes</a>
+                <a href="/clients/{{ client.id }}">Detalhes</a>
             </td>
         </tr>
         {% endfor %}

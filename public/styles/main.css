@@ -1,6 +1,7 @@
 @import "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap";
 :root {
-    --text-color: #999999
+    --text-color: #999999;
+    --primary-color: #33ff00;
 }
 
 * {

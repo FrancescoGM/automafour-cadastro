@@ -17,7 +17,19 @@ routes.get('/clients', (req, res) => {
         }
     })
 })
-
+routes.get('/clients/:id', (req, res) => {
+    db.all(`SELECT * FROM clientes`, function (err, rows) {
+        if (err) {
+            return console.log(err)
+        } else {
+            const row = rows.filter((row) => {
+                return row.id == req.params.id
+            })
+            console.log(row)
+            res.render('pages/client', { client: row[0] })
+        }
+    })
+})
 routes.post('/register-client', (req, res) => {
     const values = [
         /*req.body.ativo*/"Sim",

@@ -1,0 +1,50 @@
+{% extends 'layouts/layout.html' %}
+
+{% block head %}{% endblock head %}
+
+{% block content %}
+<p>Id: {{ client.id }}</p>
+<p>Ativo: {{ client.ativo }}</p>
+<p>Usando para Venda: {{ client.usar_venda }}</p>
+<p>Nome da Empresa: {{ client.nome_empresa }}</p>
+<p>Nome Fantasia: {{ client.nome_fantasia }}</p>
+<p>Tipo de Regime: {{ client.regime_tributario }}</p>
+<p>CNPJ: {{ client.cnpj }}</p>
+<p>Incrição Estadual: {{ client.inscricao_estadual }}</p>
+<p>Data de Fundação: {{ client.fundacao }}</p>
+<p>Tipo de Pessoa: {{ client.tipo_pessoa }}</p>
+<p>Tipo de Contribuinte: {{ client.tipo_contribuinte }}</p>
+<p>Permite Crediário / Boleto: {{ client.permite_cediario }}</p>
+<p>Permite Cheque Pré: {{ client.permite_cheque }}</p>
+<p>Endereço - Cep: {{ client.endereco_cep }}</p>
+<p>Endereço - Endereço: {{ client.endereco_endereco }}</p>
+<p>Endereço - Número: {{ client.endereco_numero }}</p>
+<p>Endereço - Bairro: {{ client.endereco_bairro }}</p>
+<p>Endereço - Cidade: {{ client.endereco_cidade }}</p>
+<p>Endereço - Código NFe: {{ client.endereco_codigo_nfe }}</p>
+<p>Endereço - Estado: {{ client.endereco_estado }}</p>
+<p>Endereço - Data Proxima Revisão: {{ client.endereco_proxima_revisao }}</p>
+<p>Endereço de Cobrança - Cep: {{ client.cobranca_cep }}</p>
+<p>Endereço de Cobrança - Endereço: {{ client.cobranca_endereco }}</p>
+<p>Endereço de Cobrança - Número: {{ client.cobranca_numero }}</p>
+<p>Endereço de Cobrança - Bairro: {{ client.cobranca_bairro }}</p>
+<p>Endereço de Cobrança - Cidade: {{ client.cobranca_cidade }}</p>
+<p>Endereço de Cobrança - Código NFe: {{ client.cobranca_codigo_nfe }}</p>
+<p>Endereço de Cobrança - Estado: {{ client.cobranca_estado }}</p>
+<p>Endereço de Cobrança - Data Próxima Revisão: {{ client.cobranca_proxima_revisao }}</p>
+<p>Telefone 1: {{ client.telefone_um }}</p>
+<p>Telefone 2: {{ client.telefone_dois }}</p>
+<p>Fax: {{ client.fax }}</p>
+<p>Email: {{ client.email }}</p>
+<p>Inscrição Municipal: {{ client.inscricao_municipal }}</p>
+<p>Renda: {{ client.renda }}</p>
+<p>Limite Original: {{ client.limite_original }}</p>
+<p>Tipo de Cliente: {{ client.tipo_cliente }}</p>
+<p>Ramo: {{ client.ramo }}</p>
+<p>Check: {{ client.check_Check }}</p>
+<p>Vendedor: {{ client.vendedor }}</p>
+<p>Representante: {{ client.representante }}</p>
+<p>Observação 1: {{ client.observacao_um }}</p>
+<p>Observação 2: {{ client.observacao_dois }}</p>
+<p>Observação de Cobrança: {{ client.observacao_cobranca }}</p>
+{% endblock content %}
