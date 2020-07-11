@@ -2,6 +2,7 @@
     width: 40px;
     top: 4px;
     right: 4px;
+    position: absolute;
     border-radius: 30%;
 }
 
@@ -19,7 +20,7 @@
 }
 
 .correios .field-container:nth-child(1) .field-group:nth-child(2) {
-    flex: 2.5;
+    flex: 2;
 }
 
 .correios .field-container:nth-child(2) .field-group:nth-child(1) {
