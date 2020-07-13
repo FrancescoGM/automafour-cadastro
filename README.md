@@ -10,6 +10,8 @@ O primeiro dia foi focado para fazer o front-end, e o segundo dia para configura
 
 Como o tempo era bem curto não tive como fazer coisas como tratamento de dados, verificação, entre outros, fiz o máximo que eu sabia, pois pesquisar por coisas novas levaria muito tempo que eu não podia gastar.
 
+Edit 01 -> Depois desses 2 dias refatorei o css dos formulários e adicionei funcionalidades as máscaras nos inputs de CEP, CNPJ, Telefone e Dinheiro sem querer fiz o merge na master kkk mas pensem que o código original não tem isso.
+
 ---
 
 ## 🚀 Tecnologias utilizadas
