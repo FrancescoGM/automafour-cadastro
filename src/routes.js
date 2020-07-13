@@ -11,4 +11,9 @@ routes.get('/register-client', (req, res) => {
 routes.get('/clients', clients.showClients)
 routes.get('/clients/:id', clients.showClient)
 routes.post('/register-client', clients.registerClient)
+
+routes.get('/edit-client/:id', clients.editClient)
+routes.put('/edit-client', clients.updateClient)
+routes.delete('/edit-client', clients.deleteClient)
+
 module.exports = routes
