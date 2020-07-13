@@ -2,6 +2,7 @@
 :root {
     --text-color: #999999;
     --primary-color: #33ff00;
+    --border-color: #00000077;
 }
 
 * {

@@ -38,24 +38,30 @@
 
         <div class="field-container">
 
-            <div class="field-group">
-                <label for="regime_tributario">Regime Tributário</label>
-                <select required name="regime_tributario">
-                    <option value="Simples Nacional">Simples Nacional</option>
-                    <option value="Lucro Presumido">Lucro Presumido</option>
-                    <option value="Lucro Real">Lucro Real</option>
-                </select>
-
-                <label for="cnpj">CNPJ</label>
-                <input required type="text" name="cnpj">
+            <div class="field-grid">
+                <div class="field-group">
+                    <label for="regime_tributario">Regime Tributário</label>
+                    <select required name="regime_tributario">
+                        <option value="Simples Nacional">Simples Nacional</option>
+                        <option value="Lucro Presumido">Lucro Presumido</option>
+                        <option value="Lucro Real">Lucro Real</option>
+                    </select>
+                </div>
+                <div class="field-group">
+                    <label for="cnpj">CNPJ</label>
+                    <input class="cnpj" required type="text" name="cnpj">
+                </div>
             </div>
 
-            <div class="field-group">
-                <label required for="inscricao_estadual">Inscr.Estadual</label>
-                <input type="text" name="inscricao_estadual">
-
-                <label required for="fundacao">Fundação</label>
-                <input type="date" max="{{ year }}-12-31" name="fundacao">
+            <div class="field-grid">
+                <div class="field-group">
+                    <label for="inscricao_estadual">Inscr.Estadual</label>
+                    <input required type="text" name="inscricao_estadual">
+                </div>
+                <div class="field-group">
+                    <label for="fundacao">Fundação</label>
+                    <input required type="date" max="{{ year }}-12-31" name="fundacao">
+                </div>
             </div>
 
             <div class="field-group">
@@ -114,12 +120,12 @@
 
             <div class="check-group">
                 <div class="checkbox">
-                    <input type="checkbox" name="permite_crediario">
+                    <input class="checkbox" type="checkbox" name="permite_crediario">
                     <label for="permite_crediario">Permite Venda Crédiario/Boleto</label>
                 </div>
 
                 <div class="checkbox">
-                    <input type="checkbox" name="permite_cheque">
+                    <input class="checkbox" type="checkbox" name="permite_cheque">
                     <label for="permite_cheque">Permite Venda Cheque Pré</label>
                 </div>
             </div>
@@ -133,7 +139,7 @@
 
                 <div class="field-group">
                     <label for="endereco_cep">Cep</label>
-                    <input required type="text" maxlength="8" name="endereco_cep">
+                    <input class="cep" required type="text" name="endereco_cep">
                 </div>
 
                 <div class="field-group">
@@ -168,6 +174,7 @@
                 <div class="field-group">
                     <label for="state">UF</label>
                     <select required name="uf">
+                        <option value="">Selecione a Região</option>
                     </select>
                     <input type="hidden" name="state">
                 </div>
@@ -184,7 +191,7 @@
 
                 <div class="field-group">
                     <label for="cobranca_cep">Cep</label>
-                    <input type="text" maxlength="8" name="cobranca_cep">
+                    <input class="cep" type="text" name="cobranca_cep">
                 </div>
 
                 <div class="field-group">
@@ -208,7 +215,6 @@
                 <div class="field-group">
                     <label for="city">Cidade</label>
                     <select name="city">
-                        <option value="">Selecione a Cidade</option>
                     </select>
                 </div>
 
@@ -240,12 +246,12 @@
 
             <div class="field-group">
                 <label required for="telefone_um">Fone 1</label>
-                <input type="text" name="telefone_um">
+                <input class="telefone" type="text" name="telefone_um">
             </div>
 
             <div class="field-group">
                 <label for="telefone_dois">Fone 2</label>
-                <input type="text" name="telefone_dois">
+                <input class="telefone" type="text" name="telefone_dois">
             </div>
 
             <div class="field-group">
@@ -268,12 +274,12 @@
 
             <div class="field-group">
                 <label for="renda">Renda/Fatura</label>
-                <input required type="text" name="renda">
+                <input required class="dinheiro" type="text" name="renda">
             </div>
 
             <div class="field-group">
                 <label for="limite_original">Lim.Original</label>
-                <input required type="text" name="limite_original">
+                <input required class="dinheiro" type="text" name="limite_original">
             </div>
 
             <div class="field-group">
@@ -356,6 +362,7 @@
         <button type="submit">Enviar</button>
     </div>
 </form>
+<script src="/scripts/input_masks.js"></script>
 <script src="/scripts/input_add.js"></script>
 <script src="/scripts/populate_uf.js"></script>
 <script src="/scripts/toggle_active.js"></script>
