@@ -3,6 +3,11 @@ form {
     text-align: left;
 }
 
+.dinheiro {
+    direction: auto;
+    text-align: left;
+}
+
 .field-form {
     width: 85vw;
     margin: 0 auto 32px;

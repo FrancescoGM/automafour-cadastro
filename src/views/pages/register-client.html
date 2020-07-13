@@ -49,7 +49,7 @@
                 </div>
                 <div class="field-group">
                     <label for="cnpj">CNPJ</label>
-                    <input required type="text" name="cnpj">
+                    <input class="cnpj" required type="text" name="cnpj">
                 </div>
             </div>
 
@@ -139,7 +139,7 @@
 
                 <div class="field-group">
                     <label for="endereco_cep">Cep</label>
-                    <input required type="text" maxlength="8" name="endereco_cep">
+                    <input class="cep" required type="text" name="endereco_cep">
                 </div>
 
                 <div class="field-group">
@@ -191,7 +191,7 @@
 
                 <div class="field-group">
                     <label for="cobranca_cep">Cep</label>
-                    <input type="text" maxlength="8" name="cobranca_cep">
+                    <input class="cep" type="text" name="cobranca_cep">
                 </div>
 
                 <div class="field-group">
@@ -246,12 +246,12 @@
 
             <div class="field-group">
                 <label required for="telefone_um">Fone 1</label>
-                <input type="text" name="telefone_um">
+                <input class="telefone" type="text" name="telefone_um">
             </div>
 
             <div class="field-group">
                 <label for="telefone_dois">Fone 2</label>
-                <input type="text" name="telefone_dois">
+                <input class="telefone" type="text" name="telefone_dois">
             </div>
 
             <div class="field-group">
@@ -274,12 +274,12 @@
 
             <div class="field-group">
                 <label for="renda">Renda/Fatura</label>
-                <input required type="text" name="renda">
+                <input required class="dinheiro" type="text" name="renda">
             </div>
 
             <div class="field-group">
                 <label for="limite_original">Lim.Original</label>
-                <input required type="text" name="limite_original">
+                <input required class="dinheiro" type="text" name="limite_original">
             </div>
 
             <div class="field-group">
@@ -362,6 +362,7 @@
         <button type="submit">Enviar</button>
     </div>
 </form>
+<script src="/scripts/input_masks.js"></script>
 <script src="/scripts/input_add.js"></script>
 <script src="/scripts/populate_uf.js"></script>
 <script src="/scripts/toggle_active.js"></script>
