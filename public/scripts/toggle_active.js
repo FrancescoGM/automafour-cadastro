@@ -13,18 +13,18 @@ buttons_correio.forEach((a, index) => {
         a.classList.add('active')
     })
 })
-var buttons_observacao = document.querySelectorAll('.observacao a')
-var fields_observacao = document.querySelectorAll('.field-container.observacao')
+var buttons_observers = document.querySelectorAll('.observacao a')
+var fields_observers = document.querySelectorAll('.field-container.observacao')
 
-buttons_observacao.forEach((a, index) => {
+buttons_observers.forEach((a, index) => {
     a.addEventListener('click', () => {
-        fields_observacao.forEach(observacao => {
-            observacao.style.display = "none"
+        fields_observers.forEach(observer => {
+            observer.style.display = "none"
         })
-        buttons_observacao.forEach((a) => {
+        buttons_observers.forEach((a) => {
             a.classList.remove('active')
         })
-        fields_observacao[index].style.display = "block"
+        fields_observers[index].style.display = "block"
         a.classList.add('active')
     })
 })
