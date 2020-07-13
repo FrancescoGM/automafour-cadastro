@@ -1,18 +1,13 @@
-{% extends 'layouts/layout.html' %}
-
-{% block head %}
+{% extends 'layouts/layout.html' %} {% block head %}
 <link rel="stylesheet" href="/styles/register-client.css">
 <link rel="stylesheet" href="/styles/correios.css">
-<link rel="stylesheet" href="/styles/form.css">
-{% endblock head %}
-
-{% block content %}
+<link rel="stylesheet" href="/styles/form.css"> {% endblock head %} {% block content %}
 
 
 <!-- Código não usado e incompleto, Esse código seria usado para fazer a edição das informações do cliente-->
 
 
-<form action="" method="post">
+<form class="page" action="/" method="post">
     <!-- Primeiro campo -->
     <div class="field-form">
 
@@ -82,8 +77,7 @@
 
                     <div class="fieldset-container">
                         <div class="content-fieldset">
-                            <input class="radio" type="radio" id="pessoa_fisica" name="tipo_pessoa" value="Física"
-                                checked="checked">
+                            <input class="radio" type="radio" id="pessoa_fisica" name="tipo_pessoa" value="Física" checked="checked">
                             <label for="pessoa_fisica">Física</label>
                         </div>
 
@@ -102,13 +96,11 @@
 
                     <div class="fieldset-container big-field">
                         <div class="content-fieldset">
-                            <input class="radio" type="radio" id="contribuinte" name="tipo_contribuinte"
-                                value="Contribuinte" checked="checked">
+                            <input class="radio" type="radio" id="contribuinte" name="tipo_contribuinte" value="Contribuinte" checked="checked">
                             <label for="contribuinte">Contribuinte</label>
                         </div>
                         <div class="content-fieldset">
-                            <input class="radio" type="radio" id="nao_contribuinte" name="tipo_contribuinte"
-                                value="Não Contribuinte">
+                            <input class="radio" type="radio" id="nao_contribuinte" name="tipo_contribuinte" value="Não Contribuinte">
                             <label for="nao_contribuinte">Não Contribuinte</label>
                         </div>
                         <div class="content-fieldset">

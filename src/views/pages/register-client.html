@@ -1,14 +1,9 @@
-{% extends 'layouts/layout.html' %}
-
-{% block head %}
+{% extends 'layouts/layout.html' %} {% block head %}
 <link rel="stylesheet" href="/styles/register-client.css">
 <link rel="stylesheet" href="/styles/correios.css">
-<link rel="stylesheet" href="/styles/form.css">
-{% endblock head %}
+<link rel="stylesheet" href="/styles/form.css"> {% endblock head %} {% block content %}
 
-{% block content %}
-
-<form action="/home" method="post">
+<form method="post">
     {% include 'partials/form.njk' %}
     <div class="field-form">
         <button type="submit">Enviar</button>

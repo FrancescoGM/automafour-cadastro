@@ -56,3 +56,10 @@ header ul {
     color: var(--text-color);
     text-decoration: none;
 }
+
+.page {
+    color: black;
+    text-align: left;
+    width: 85vw;
+    margin: 0 auto;
+}

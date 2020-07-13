@@ -1,16 +1,9 @@
-form {
-    color: black;
-    text-align: left;
-}
-
 .dinheiro {
     direction: auto;
     text-align: left;
 }
 
 .field-form {
-    width: 85vw;
-    margin: 0 auto 32px;
     padding-bottom: 8px;
     border-bottom: 1px solid #00000044;
     display: flex;
