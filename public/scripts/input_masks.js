@@ -7,7 +7,8 @@ function addEventListenerForEach(ElementIndicator, callback) {
 function maskCellphone(event) {
     event.target.value = event.target.value
         .replace(/\D/g, '')
-        .replace(/(\d{0})(\d{2})/, '$1($2) ')
+        .replace(/(\d{0})(\d{1,2})/, '$1($2')
+        .replace(/(\d{2})(\d)/, '$1) $2')
         .replace(/(\d{5})(\d{1,4})/, '$1-$2')
         .replace(/(-\d{4})\d+?$/, '$1')
 }
