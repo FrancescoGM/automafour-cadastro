@@ -1,11 +1,7 @@
-{% extends 'layouts/layout.html' %}
-
-{% block head %}
-<link rel="stylesheet" href="/styles/client.css">
-{% endblock head %}
-
-{% block content %}
+{% extends 'layouts/layout.html' %} {% block head %}
+<link rel="stylesheet" href="/styles/client.css"> {% endblock head %} {% block content %}
 <div class="page-container">
+    <a href="/client/edit/{{ client.id}}">Editar</a>
     <span>Id: {{ client.id }}</span>
     <span>Ativo: {{ client.ativo }}</span>
     <span>Usando para Venda: {{ client.usar_venda }}</span>

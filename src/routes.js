@@ -12,8 +12,8 @@ routes.get('/clients', clients.showClients)
 routes.get('/clients/:id', clients.showClient)
 routes.post('/register-client', clients.registerClient)
 
-routes.get('/edit-client/:id', clients.editClient)
-routes.put('/edit-client', clients.updateClient)
-routes.delete('/edit-client', clients.deleteClient)
+routes.get('/client/edit/:id', clients.editClient)
+routes.put('/client/edit/:id', clients.updateClient)
+routes.delete('/client/edit/:id', clients.deleteClient)
 
 module.exports = routes

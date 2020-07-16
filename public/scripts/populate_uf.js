@@ -1,5 +1,5 @@
 document.querySelectorAll('select[name="uf"]').forEach((select) => {
-    select.addEventListener('change', getCities)
+    select.addEventListener('change', getCitiesHandle)
 })
 
 function getFetch(url, object) {
@@ -18,12 +18,11 @@ function populateUFs() {
     stateSelect.forEach(select => {
         getFetch(url, select)
     })
-
 }
 
 populateUFs()
 
-function getCities(event) {
+function getCitiesHandle(event) {
     const citiesSelect = event.path[2].children[1].children[1]
     const stateInput = event.path[2].children[3].children[2]
     const url = `https://servicodados.ibge.gov.br/api/v1/localidades/estados/${event.target.value}/municipios`
@@ -32,7 +31,7 @@ function getCities(event) {
 
     citiesSelect.innerHTML = ""
     if (document.querySelector('select[name="uf"]').value != "") {
-        citiesSelect.disabled = false
+
         fetch(url)
             .then((response) => response.json())
             .then((values) => {
@@ -40,7 +39,5 @@ function getCities(event) {
                     citiesSelect.innerHTML += `<option value="${value.nome}">${value.nome}</option>`
                 }))
             })
-    } else {
-        citiesSelect.disabled = true
     }
 }
