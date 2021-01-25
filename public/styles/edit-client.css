@@ -1,0 +1,37 @@
+.field-form:nth-child(1) .field-container:nth-child(1) .field-group:nth-child(1),
+.field-form:nth-child(1) .field-container:nth-child(1) .field-group:nth-child(2),
+.field-form:nth-child(1) .field-container:nth-child(1) .field-group:nth-child(3) {
+    flex: 0.4;
+}
+
+button[type=submit] {
+    width: 100%;
+    height: 60px;
+    margin: 32px auto 0;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    font-size: 32px;
+    font-weight: bold;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: 200ms;
+}
+
+form:nth-child(1) button[type=submit] {
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+}
+
+form:nth-child(1) button[type=submit]:hover {
+    background-color: #9933ff;
+}
+
+form:nth-child(2) button[type=submit] {
+    background-color: #f04000;
+    margin-top: 8px;
+}
+
+form:nth-child(2) button[type=submit]:hover {
+    background-color: #ff0000;
+}

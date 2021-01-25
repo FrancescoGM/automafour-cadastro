@@ -1,30 +1,22 @@
-var buttons_correio = document.querySelectorAll('.correios a')
-var correios_container = document.querySelectorAll('.correios-container')
+function toggleActive(buttonsPath, fieldsPath) {
+    const buttons = document.querySelectorAll(buttonsPath)
+    const fields = document.querySelectorAll(fieldsPath)
 
-buttons_correio.forEach((a, index) => {
-    a.addEventListener('click', () => {
-        correios_container.forEach(container => {
-            container.style.display = "none"
-        })
-        buttons_correio.forEach((a) => {
-            a.classList.remove('active')
-        })
-        correios_container[index].style.display = "block"
-        a.classList.add('active')
-    })
-})
-var buttons_observacao = document.querySelectorAll('.observacao a')
-var fields_observacao = document.querySelectorAll('.field-container.observacao')
+    buttons.forEach((element, index) => {
+        element.addEventListener('click', () => {
 
-buttons_observacao.forEach((a, index) => {
-    a.addEventListener('click', () => {
-        fields_observacao.forEach(observacao => {
-            observacao.style.display = "none"
+            fields.forEach(field => {
+                field.style.display = "none"
+            })
+
+            buttons.forEach(button => {
+                button.classList.remove('active')
+            })
+
+            fields[index].style.display = "block"
+            element.classList.add('active')
         })
-        buttons_observacao.forEach((a) => {
-            a.classList.remove('active')
-        })
-        fields_observacao[index].style.display = "block"
-        a.classList.add('active')
     })
-})
+}
+toggleActive('.correios a', '.correios-container')
+toggleActive('.observacao a', '.field-container.observacao')

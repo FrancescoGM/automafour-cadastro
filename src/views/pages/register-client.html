@@ -1,14 +1,9 @@
-{% extends 'layouts/layout.html' %}
-
-{% block head %}
+{% extends 'layouts/layout.html' %} {% block head %}
 <link rel="stylesheet" href="/styles/register-client.css">
 <link rel="stylesheet" href="/styles/correios.css">
-<link rel="stylesheet" href="/styles/form.css">
-{% endblock head %}
+<link rel="stylesheet" href="/styles/form.css"> {% endblock head %} {% block content %}
 
-{% block content %}
-
-<form action="" method="post">
+<form class="page" action="" method="post">
     <!-- Primeiro campo -->
     <div class="field-form">
 
@@ -71,8 +66,7 @@
 
                     <div class="fieldset-container">
                         <div class="content-fieldset">
-                            <input class="radio" type="radio" id="pessoa_fisica" name="tipo_pessoa" value="Física"
-                                checked="checked">
+                            <input class="radio" type="radio" id="pessoa_fisica" name="tipo_pessoa" value="Física" checked="checked">
                             <label for="pessoa_fisica">Física</label>
                         </div>
 
@@ -91,13 +85,11 @@
 
                     <div class="fieldset-container big-field">
                         <div class="content-fieldset">
-                            <input class="radio" type="radio" id="contribuinte" name="tipo_contribuinte"
-                                value="Contribuinte" checked="checked">
+                            <input class="radio" type="radio" id="contribuinte" name="tipo_contribuinte" value="Contribuinte" checked="checked">
                             <label for="contribuinte">Contribuinte</label>
                         </div>
                         <div class="content-fieldset">
-                            <input class="radio" type="radio" id="nao_contribuinte" name="tipo_contribuinte"
-                                value="Não Contribuinte">
+                            <input class="radio" type="radio" id="nao_contribuinte" name="tipo_contribuinte" value="Não Contribuinte">
                             <label for="nao_contribuinte">Não Contribuinte</label>
                         </div>
                         <div class="content-fieldset">
@@ -163,6 +155,7 @@
                 <div class="field-group">
                     <label for="city">Cidade</label>
                     <select required name="city">
+                        <option value="">Selecione a cidade</option>
                     </select>
                 </div>
 
@@ -215,6 +208,7 @@
                 <div class="field-group">
                     <label for="city">Cidade</label>
                     <select name="city">
+                        <option value="">Selecione a cidade</option>
                     </select>
                 </div>
 
@@ -366,6 +360,7 @@
 <script src="/scripts/input_add.js"></script>
 <script src="/scripts/populate_uf.js"></script>
 <script src="/scripts/toggle_active.js"></script>
+
 
 
 {% endblock content %}

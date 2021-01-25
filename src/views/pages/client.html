@@ -1,54 +1,65 @@
-{% extends 'layouts/layout.html' %}
-
-{% block head %}
-<link rel="stylesheet" href="/styles/client.css">
-{% endblock head %}
-
-{% block content %}
-<div class="page-container">
-    <span>Id: {{ client.id }}</span>
-    <span>Ativo: {{ client.ativo }}</span>
-    <span>Usando para Venda: {{ client.usar_venda }}</span>
-    <span>Nome da Empresa: {{ client.nome_empresa }}</span>
-    <span>Nome Fantasia: {{ client.nome_fantasia }}</span>
-    <span>Tipo de Regime: {{ client.regime_tributario }}</span>
-    <span>CNPJ: {{ client.cnpj }}</span>
-    <span>Incrição Estadual: {{ client.inscricao_estadual }}</span>
-    <span>Data de Fundação: {{ client.fundacao }}</span>
-    <span>Tipo de Pessoa: {{ client.tipo_pessoa }}</span>
-    <span>Tipo de Contribuinte: {{ client.tipo_contribuinte }}</span>
-    <span>Permite Crediário / Boleto: {{ client.permite_cediario }}</span>
-    <span>Permite Cheque Pré: {{ client.permite_cheque }}</span>
-    <span>Endereço - Cep: {{ client.endereco_cep }}</span>
-    <span>Endereço - Endereço: {{ client.endereco_endereco }}</span>
-    <span>Endereço - Número: {{ client.endereco_numero }}</span>
-    <span>Endereço - Bairro: {{ client.endereco_bairro }}</span>
-    <span>Endereço - Cidade: {{ client.endereco_cidade }}</span>
-    <span>Endereço - Código NFe: {{ client.endereco_codigo_nfe }}</span>
-    <span>Endereço - Estado: {{ client.endereco_estado }}</span>
-    <span>Endereço - Data Proxima Revisão: {{ client.endereco_proxima_revisao }}</span>
-    <span>Endereço de Cobrança - Cep: {{ client.cobranca_cep }}</span>
-    <span>Endereço de Cobrança - Endereço: {{ client.cobranca_endereco }}</span>
-    <span>Endereço de Cobrança - Número: {{ client.cobranca_numero }}</span>
-    <span>Endereço de Cobrança - Bairro: {{ client.cobranca_bairro }}</span>
-    <span>Endereço de Cobrança - Cidade: {{ client.cobranca_cidade }}</span>
-    <span>Endereço de Cobrança - Código NFe: {{ client.cobranca_codigo_nfe }}</span>
-    <span>Endereço de Cobrança - Estado: {{ client.cobranca_estado }}</span>
-    <span>Endereço de Cobrança - Data Próxima Revisão: {{ client.cobranca_proxima_revisao }}</span>
-    <span>Telefone 1: {{ client.telefone_um }}</span>
-    <span>Telefone 2: {{ client.telefone_dois }}</span>
-    <span>Fax: {{ client.fax }}</span>
-    <span>Email: {{ client.email }}</span>
-    <span>Inscrição Municipal: {{ client.inscricao_municipal }}</span>
-    <span>Renda: {{ client.renda }}</span>
-    <span>Limite Original: {{ client.limite_original }}</span>
-    <span>Tipo de Cliente: {{ client.tipo_cliente }}</span>
-    <span>Ramo: {{ client.ramo }}</span>
-    <span>Check: {{ client.check_Check }}</span>
-    <span>Vendedor: {{ client.vendedor }}</span>
-    <span>Representante: {{ client.representante }}</span>
-    <span>Observação 1: {{ client.observacao_um }}</span>
-    <span>Observação 2: {{ client.observacao_dois }}</span>
-    <span>Observação de Cobrança: {{ client.observacao_cobranca }}</span>
+{% extends 'layouts/layout.html' %} {% block head %}
+<link rel="stylesheet" href="/styles/client.css"> {% endblock head %} {% block content %}
+<div class="page">
+    <div class="span-container">
+        <span>Id: <span class="value">{{ client.id }}</span></span>
+        <span>Ativo: <span class="value">{{ client.ativo }}</span></span>
+        <span>Usando para Venda: <span class="value">{{ client.usar_venda }}</span></span>
+        <span>Nome da Empresa: <span class="value">{{ client.nome_empresa }}</span></span>
+        <span>Nome Fantasia: <span class="value">{{ client.nome_fantasia }}</span></span>
+    </div>
+    <div class="span-container">
+        <span>Tipo de Regime: <span class="value">{{ client.regime_tributario }}</span></span>
+        <span>CNPJ: <span class="value">{{ client.cnpj }}</span></span>
+        <span>Incrição Estadual: <span class="value">{{ client.inscricao_estadual }}</span></span>
+        <span>Data de Fundação: <span class="value">{{ client.fundacao }}</span></span>
+        <span>Tipo de Pessoa: <span class="value">{{ client.tipo_pessoa }}</span></span>
+        <span>Tipo de Contribuinte: <span class="value">{{ client.tipo_contribuinte }}</span></span>
+        <span>Permite Crediário / Boleto: <span class="value">{{ client.permite_cediario }}</span></span>
+        <span>Permite Cheque Pré: <span class="value">{{ client.permite_cheque }}</span></span>
+    </div>
+    <div class="span-container">
+        <span>End.Cep: <span class="value">{{ client.endereco_cep }}</span></span>
+        <span>End.Endereço: <span class="value">{{ client.endereco_endereco }}</span></span>
+        <span>End.Número: <span class="value">{{ client.endereco_numero }}</span></span>
+        <span>End.Bairro: <span class="value">{{ client.endereco_bairro }}</span></span>
+        <span>End.Cidade: <span class="value">{{ client.endereco_cidade }}</span></span>
+        <span>End.Código NFe: <span class="value">{{ client.endereco_codigo_nfe }}</span></span>
+        <span>End.Estado: <span class="value">{{ client.endereco_estado }}</span></span>
+        <span>End.Data Prox.Revisão: <span class="value">{{ client.endereco_proxima_revisao }}</span></span>
+    </div>
+    <div class="span-container">
+        <span>End.de.Cobr.Cep: <span class="value">{{ client.cobranca_cep }}</span></span>
+        <span>End.de.Cobr.Endereço: <span class="value">{{ client.cobranca_endereco }}</span></span>
+        <span>End.de.Cobr.Número: <span class="value">{{ client.cobranca_numero }}</span></span>
+        <span>End.de.Cobr.Bairro: <span class="value">{{ client.cobranca_bairro }}</span></span>
+        <span>End.de.Cobr.Cidade: <span class="value">{{ client.cobranca_cidade }}</span></span>
+        <span>End.de.Cobr.Código NFe: <span class="value">{{ client.cobranca_codigo_nfe }}</span></span>
+        <span>End.de.Cobr.Estado: <span class="value">{{ client.cobranca_estado }}</span></span>
+        <span>End.de.Cobr.Data Próx.Revisão: <span class="value">{{ client.cobranca_proxima_revisao }}</span></span>
+    </div>
+    <div class="span-container">
+        <span>Telefone 1: <span class="value">{{ client.telefone_um }}</span></span>
+        <span>Telefone 2: <span class="value">{{ client.telefone_dois }}</span></span>
+        <span>Fax: <span class="value">{{ client.fax }}</span></span>
+        <span>Email: <span class="value">{{ client.email }}</span></span>
+        <span>Inscrição Municipal: <span class="value">{{ client.inscricao_municipal }}</span></span>
+        <span>Renda: <span class="value">{{ client.renda }}</span></span>
+        <span>Limite Original: <span class="value">{{ client.limite_original }}</span></span>
+        <span>Tipo de Cliente: <span class="value">{{ client.tipo_cliente }}</span></span>
+        <span>Ramo: <span class="value">{{ client.ramo }}</span></span>
+        <span>Check: <span class="value">{{ client.check_Check }}</span></span>
+        <span>Vendedor: <span class="value">{{ client.vendedor }}</span></span>
+        <span>Representante: <span class="value">{{ client.representante }}</span></span>
+    </div>
+    <div class="span-container">
+        <span>Observação 1: <span class="value">{{ client.observacao_um }}</span></span>
+        <span>Observação 2: <span class="value">{{ client.observacao_dois }}</span></span>
+        <span>Observação de Cobrança: <span class="value">{{ client.observacao_cobranca }}</span></span>
+        </span>
+    </div>
+    <div class="a-container">
+        <a href="/client/edit/{{ client.id}}">Editar</a>
+    </div>
 </div>
 {% endblock content %}
